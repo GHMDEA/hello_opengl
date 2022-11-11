@@ -15,7 +15,7 @@ Face* build_face() {
 	in.open("in.txt");
 	int loop_cnt;
 	in >> loop_cnt;
-	// �⻷
+	// 外环
 	int vtx_cnt;
 	in >> vtx_cnt;
 	double x, y, z;
@@ -32,7 +32,7 @@ Face* build_face() {
 
 	}
 	EulerOperation::mef(prvv, solid->sorigin, face);
-	// �ڻ�
+	// 内环
 	for (int i = 1; i < loop_cnt; i++) {
 		in >> vtx_cnt;
 		prvv = solid->sorigin;
@@ -57,13 +57,13 @@ Face* build_face() {
 }
 
 int main() {
-	// �������
+	// 构造底面
 	Face* face = build_face();
-	// ɨ��
+	// 扫成
 	Solid* solid = Sweep::sweep(face, sweep_x, sweep_y, sweep_z);
-	// ��ӡ����
+	// 打印坐标
 	Draw::print_coordinate(solid);
-	// ����
+	// 绘制
 	Draw d;
 	d.draw(solid);
 }
