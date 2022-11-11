@@ -31,7 +31,7 @@ hello_opengl-master
 │    └─ shader.vs
 ├─ hello_opengl.sln
 ├─ opengl
-├─ pic
+├─ result
 └─ readme.md
 ```
 
@@ -70,8 +70,9 @@ Sweep.h
 main.cpp
 // 数据输入
 in.txt
+//真实感图形显示
+result
 // 项目说明
-pic
 readme.md
 ```
 
@@ -106,7 +107,6 @@ readme.md
 
 对应的底面如下，扫成方向和距离为沿z轴正方向扫成20个单位：  
 
-![底面](pic/底面.png)
 
 ### 输出     
 
@@ -170,13 +170,7 @@ face[12] -> loop[0]
 
 图形输出为：  
 
-[这里](https://www.bilibili.com/video/BV1GK41137f4)可以通过视频看到效果。  
-
-效果截图  
-
-![图形示例1](pic/图形示例1.png)
-
-![图形示例2](pic/图形示例2.png)
+见result文件
 
 问题与局限：  
 
